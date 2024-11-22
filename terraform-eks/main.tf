@@ -1,7 +1,7 @@
 provider "aws" {
     region = "ca-central-1"
-    access_key = "AKIAUXTSPSNU5M5HZCLR"
-    secret_key = "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"
+    access_key = env(ACCESS_KEY)
+    secret_key = env(SECRET_KEY)
 }
 
 data "aws_eks_cluster" "eks-cluster" {
